@@ -18,7 +18,14 @@ public class BallChild : Ball
             Debug.Log("up arrow from child");
         }
 
-        changePosition();
+        changePositionLeft();
+        jump();
+    }
+
+    public override void jump() {
+if (Input.GetKeyDown(KeyCode.Space)) {
+            transform.Translate(Vector3.up * 20 * Time.deltaTime * speed);
+        }
     }
     
 }
