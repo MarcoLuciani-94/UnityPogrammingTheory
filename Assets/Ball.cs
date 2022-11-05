@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed = 10.0f;
+    [SerializeField] // exposes private variables in the inspector
+    public int speed;
+    public int speedValue
+{
+    get { return speed; } // getter returns backing field
+    set { speed = value; } // setter uses backing field
+}
     // Start is called before the first frame update
     void Start()
     {
-        
+        speedValue = 10;
     }
 
     // Update is called once per frame

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BallChild : Ball
 {
-    // Start is called before the first frame update
+  
     void Start()
     {
-        
+          speedValue = 20;
     }
 
     // Update is called once per frame
